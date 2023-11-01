@@ -1,6 +1,16 @@
-# essentials
+# Dogs cheats
 
-## Project setup
+# About
+```
+I'm learning Vue right now, and I'm using this project to test my 
+knowledge with Vuetify. The idea is to create a pet shop system. 
+Currently, I'm working on the frontend and using some internet APIs,
+but later I'll apply my own backend.
+```
+
+## essentials
+
+### Project setup
 
 ```
 # yarn
@@ -16,7 +26,7 @@ pnpm install
 bun install
 ```
 
-### Compiles and hot-reloads for development
+#### Compiles and hot-reloads for development
 
 ```
 # yarn
@@ -32,7 +42,7 @@ pnpm dev
 bun run dev
 ```
 
-### Compiles and minifies for production
+#### Compiles and minifies for production
 
 ```
 # yarn
@@ -48,7 +58,7 @@ pnpm build
 bun run build
 ```
 
-### Lints and fixes files
+#### Lints and fixes files
 
 ```
 # yarn
@@ -64,6 +74,4 @@ pnpm lint
 bun run lint
 ```
 
-### Customize configuration
 
-See [Configuration Reference](https://vitejs.dev/config/).
