@@ -27,6 +27,7 @@
               </v-row>
 
               <v-select
+                class="mt-3"
                 label="Species"
                 variant="outlined"
                 :items="speciesArray"
@@ -62,7 +63,7 @@
               </v-chip>
             </td>
            <td>
-            <v-chip v-if="user.species === 'Human'" size="small" variant="outlined" color="blue"> 
+            <v-chip v-if="user.species === 'Human'" size="small" variant="outlined" color="blue" > 
               <span  style="color: white;">{{ user.species }}</span>
             </v-chip> 
             <v-chip v-if="user.species === 'Alien'" size="small" variant="outlined" color="green"> 

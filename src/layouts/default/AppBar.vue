@@ -39,8 +39,10 @@
   <v-app-bar flat class="border-b">
         <v-app-bar-nav-icon @click="showMenu = !showMenu"></v-app-bar-nav-icon>
         <v-app-bar-title>Dogs cheats</v-app-bar-title>
+        <v-btn dense icon="mdi-theme-light-dark" class="mr-2" @click="changeTheme()" ></v-btn>
         <template #append >
           <v-menu>
+            
             <template #activator="{ props }">
               
               <v-avatar v-bind="props">
@@ -72,27 +74,43 @@
       </v-app-bar>
 </template>
 
-<script setup>
+<script >
 import router from "@/router";
-import { ref } from "vue";
+
 
   /**
    * Data
-   */
-  const showMenu = ref(true);
-
-  /**
-   * methods
-   */
-
-  const moveToHome = () => {
-    router.push("/")
-  };
-  const moveToUsers = () => {
-    router.push("/users")
-  };
-  const moveToProfile = () => {
-    router.push("/profile")
+   */ 
+  export default {
+    data() {
+      return {
+         showMenu: false,
+         theme: 'dark',
+         currentTheme: ""
+      }
+    },
+    methods: {
+      moveToHome() {
+       return router.push("/")
+      },
+      moveToUsers() {
+        return router.push("/users")
+      },
+      moveToProfile(){
+        return router.push("/profile")
+      },
+      changeTheme(){
+        this.theme = this.theme === 'light' ? 'dark' : 'light';
+      if (this.theme === 'dark') {
+        document.documentElement.classList.add('theme--dark');
+      } else {
+        document.documentElement.classList.remove('theme--dark');
+      }
+      }
+    },
+    created(){
+      
+    }
   }
-
+  
 </script>

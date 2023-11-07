@@ -1,4 +1,4 @@
-<template>
+<template >
   <v-app theme="dark">
     <default-bar />
 
