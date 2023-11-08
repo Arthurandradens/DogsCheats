@@ -58,16 +58,24 @@
           <tr v-for="(user, index) in character" :key="index" cols="12">
             <td>{{ user.name }}</td>
             <td>
-              <v-chip size="small" variant="outlined" color="blue">
-                <span style="color: #fff;">{{ user.status }}</span>
+              <v-chip v-if="user.status === 'Alive'" size="small" variant="outlined" color="yellow-darken-1">
+               {{ user.status }}
+              </v-chip>
+
+              <v-chip v-if="user.status === 'unknown'" size="small" variant="outlined" color="blue-grey">
+               {{ user.status }}
+              </v-chip>
+
+              <v-chip v-if="user.status === 'Dead'" size="small" variant="outlined" color="red">
+               {{ user.status }}
               </v-chip>
             </td>
            <td>
             <v-chip v-if="user.species === 'Human'" size="small" variant="outlined" color="blue" > 
-              <span  style="color: white;">{{ user.species }}</span>
+              {{ user.species }}
             </v-chip> 
             <v-chip v-if="user.species === 'Alien'" size="small" variant="outlined" color="green"> 
-              <span  style="color: white;">{{ user.species }}</span>
+              {{ user.species }}
             </v-chip> 
           </td>
             <td>
