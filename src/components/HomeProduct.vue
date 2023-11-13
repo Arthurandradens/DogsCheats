@@ -2,7 +2,7 @@
   <v-container>
     <h1>Dashboard</h1>
     <v-row justify="center">
-      <v-col v-for="(character, id) in paginatedImages" :key="id" cols="12" sm="6" md="4" lg="2">
+      <v-col v-for="(character, id) in paginatedImages" :key="id" cols="12" sm="6" md="4" lg="3">
         <v-card flat class="border fill-height" style="display: flex; flex-direction: column; justify-content: space-between;">
           <v-img class="align-end text-white" :src="character.image" height="200px">
             <v-card-title> {{ character.name }}</v-card-title>
