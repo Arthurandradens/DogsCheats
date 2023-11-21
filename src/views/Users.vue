@@ -46,7 +46,7 @@
           </v-dialog>
         </v-col>
       </v-row>
-                                      <Search @highlight-user="highlightUser" />
+                                      <Search />
       <v-table>
         <thead>
           <tr>
@@ -62,7 +62,7 @@
            :key="index" 
            cols="12">
             <td
-            :class="{highlight:user.name.includes(highlight)}">{{ user.name }}</td>
+              >{{ user.name }}</td>
             <td>
               <v-chip size="small" variant="outlined" :color="putStatusColor(user.status)">
                 {{ user.status }}
@@ -87,7 +87,6 @@
 <script>
 import axios from 'axios';
 import Search from '@/layouts/Search.vue'
-import { ref } from 'vue';
 export default {
   components:{
     Search,
@@ -100,7 +99,6 @@ export default {
       speciesArray: [],
       statusArray: [],
       namesArray: [],
-      highlight: ref(''),
       searched: '',
 
       validateName: [
@@ -137,7 +135,6 @@ export default {
         return this.character;
       } catch (error) {
         console.error(error);
-        return [];
       }
     },
     async getUsersSpecies() {
@@ -197,13 +194,9 @@ export default {
           break;
       }
     },
-    highlightUser(searched){
-      console.log('searched' + searched)
-    }
   },
   created() {
     this.getUsers();
-    
   }
 };
 </script>
