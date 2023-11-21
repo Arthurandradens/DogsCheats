@@ -3,7 +3,8 @@
 # About
 ```
 I'm learning Vue right now, and I'm using this project to test my 
-knowledge with Vuetify. The idea is to create a pet shop system. 
+knowledge with Vuetify. The idea is to create a simple
+system that make some CRUD's. 
 Currently, I'm working on the frontend and using some internet APIs,
 but later I'll apply my own backend.
 ```
